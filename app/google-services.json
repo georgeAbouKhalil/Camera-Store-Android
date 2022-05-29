@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "484061853062",
+    "project_id": "camerastore-bac6d",
+    "storage_bucket": "camerastore-bac6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484061853062:android:8b1feeb65155d04c3fe807",
+        "android_client_info": {
+          "package_name": "com.example.camerastore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484061853062-7r8lki2odfac6bn83l2suo9gbs0l9ci5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT34gFCxbu4bT2HzAhpgMSYvE3I504s78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484061853062-7r8lki2odfac6bn83l2suo9gbs0l9ci5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

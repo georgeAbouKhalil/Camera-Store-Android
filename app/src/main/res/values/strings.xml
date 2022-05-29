@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Camera Store</string>
+
+    <string name="login_text">Login</string>
+    <string name="signUp_text">SignUp</string>
+    <string name="profile_text">Profile</string>
+    <string name="home_text">Home</string>
+</resources>

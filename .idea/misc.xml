@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.228" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/bg_round.xml" value="0.1465" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/buy_custom.xml" value="0.228" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/custom_visa.xml" value="0.228" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1865" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/image_btn.xml" value="0.1635" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/item_selector.xml" value="0.1865" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/loginbtn.xml" value="0.1" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/logout.xml" value="0.218" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/product_box.xml" value="0.142" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/profileinput.xml" value="0.197" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/round_btn.xml" value="0.1925" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/round_btnc.xml" value="0.1" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/round_btnr.xml" value="0.1" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/round_corner.xml" value="0.1865" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/search_field.xml" value="0.1635" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/shape_rect01.xml" value="0.103" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/drawable/white_circle.xml" value="0.1615" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_add_to_carts.xml" value="0.31215469613259667" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_cart.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_details.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_main_store.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_tanks_for_baying.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_update_data.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_view_product.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/activity_visa.xml" value="0.264" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/custom_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/custom_dialog_visa.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/custom_grid_layout.xml" value="0.4" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/custom_list_view.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/dialog_quantity.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/frame1.xml" value="0.2" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/frame2.xml" value="0.2" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/frame3.xml" value="0.2" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/main_item.xml" value="0.18703703703703703" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/layout/search_outline.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/menu/item_menu.xml" value="0.25" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/gougo/AndroidStudioProjects/CameraStore/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="168dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toTopOf="@+id/userEmailLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/userEmailLogin"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="29dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_baseline_user"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:textColorHint="#ffff"
+        android:textSize="16dp"
+        android:layout_marginTop="150dp"/>
+
+    <EditText
+        android:id="@+id/userEmail"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="29dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:textColorHint="#ffff"
+        android:textSize="16dp"
+        android:layout_marginTop="230dp" />
+
+    <EditText
+        android:id="@+id/userPhone"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="60dp"
+        android:background="#11000000"
+        android:digits="0123456789"
+        android:drawableLeft="@drawable/phone_icon"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="number"
+        android:textColor="#ffff"
+        android:textColorHint="#ffff"
+        android:textSize="16dp"
+        android:layout_marginTop="310dp" />
+
+    <EditText
+        android:id="@+id/userPassword"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="39dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#ffff"
+        android:textColorHint="#ffff"
+        android:textSize="16dp"
+        android:layout_marginTop="390dp" />
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="261dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/round_btn"
+        android:text="sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginTop="470dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="70dp"
+        android:visibility="invisible"
+        android:layout_marginTop="550dp" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        app:elevation="2dp"
+        app:menu="@menu/item_menu"
+        android:background="@drawable/round_corner"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/item_selector"
+        android:id="@+id/bottom_navigation"/>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".profile">
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="173dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="31dp"
+        app:srcCompat="@drawable/profile2" />
+
+    <TextView
+        android:id="@+id/profileUserName"
+        android:layout_width="310dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/profileinput"
+        android:gravity="center"
+        android:hint="user name"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/profileEmail"
+        android:layout_width="310dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="310dp"
+        android:background="@drawable/profileinput"
+        android:gravity="center"
+        android:hint="Email"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/profilePhone"
+        android:layout_width="310dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/profileinput"
+        android:gravity="center"
+        android:hint="Phone"
+        android:text="Phone"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/changeProfile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/profileinput"
+        android:text="Change profile"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/logout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/profileinput"
+        android:onClick="logout"
+        android:text="Logout"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="550dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginBottom="42dp"
+        android:background="#00000000"
+        app:srcCompat="@drawable/ic_baseline_email_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="30dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginBottom="93dp"
+        android:background="#00000000"
+        app:srcCompat="@drawable/phone_icon"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="30dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginBottom="31dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/profileUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_user" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/profileinput"
+        android:fontFamily="sans-serif-medium"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        app:elevation="2dp"
+        app:menu="@menu/item_menu"
+        android:background="@drawable/round_corner"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/item_selector"
+        android:id="@+id/bottom_navigation"/>
+
+</RelativeLayout>

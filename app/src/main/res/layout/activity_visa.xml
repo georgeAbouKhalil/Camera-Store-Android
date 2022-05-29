@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".visa">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="330dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="72dp"
+        android:elevation="10dp"
+        app:cardBackgroundColor="#019CFF"
+        app:cardCornerRadius="30dp"
+
+        app:contentPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/visalogo" />
+
+        <TextView
+            android:id="@+id/visaNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/visaDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="120dp"
+            android:fontFamily="sans-serif-medium"
+            android:hint="MM/YY"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/VisaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="120dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="76dp"
+            android:layout_height="69dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/chip" />
+
+        <TextView
+            android:id="@+id/textcvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="100dp"
+            android:background="#fff"
+            android:hint="    CVV      "
+            android:textColorHint="@color/black"
+            android:textColor="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/inputVisaNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:maxLength="16"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:textColorHint="#979797"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Card number"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/inputDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="93dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Card Number :"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/inputVisaNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="53dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Date Exp :"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toStartOf="@+id/inputDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/inputDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="MM/YY"
+        android:maxLength="4"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:textColorHint="#979797"
+        app:layout_constraintBottom_toTopOf="@+id/inputCardName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/inputVisaNumber" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Card Name :"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/inputCardName"
+        app:layout_constraintHorizontal_bias="0.52"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <EditText
+        android:id="@+id/inputCardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="26dp"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        android:ems="10"
+        android:hint="Cardholder Name"
+        app:layout_constraintBottom_toTopOf="@+id/inputCvv"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:textColorHint="#979797"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/inputDate" />
+
+    <Button
+        android:id="@+id/orderBtn"
+        android:layout_width="176dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="49dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="sans-serif-medium"
+        android:text="Place Order"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCvv" />
+
+    <EditText
+        android:id="@+id/inputCvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="26dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:maxLength="3"
+        android:hint="CVV"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+        android:textColorHint="#979797"
+        app:layout_constraintTop_toBottomOf="@+id/inputCardName" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="148dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="CVV :"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/inputCvv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageButton
+        android:id="@+id/cvvinfo"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="38dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputCardName"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/help_output" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
