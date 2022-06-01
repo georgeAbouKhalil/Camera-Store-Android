@@ -120,7 +120,7 @@ public class Details extends Fragment {
 
             }
             if(quantityS.startsWith("0")){
-                quantityHolder.setText("it is not in stock");
+                quantityHolder.setText("Out Of Stock");
                 button_buy.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -134,7 +134,7 @@ public class Details extends Fragment {
                     }
                 });
             }else{
-                quantityHolder.setText("In Stock: " + quantityS);
+                quantityHolder.setText(" In Stock");
             }
         }
 

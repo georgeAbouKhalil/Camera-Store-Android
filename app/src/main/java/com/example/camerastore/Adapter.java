@@ -36,7 +36,11 @@ public class Adapter extends FirebaseRecyclerAdapter<model,Adapter.myviewholder>
 
         holder.name.setText(model.getName());
         holder.price.setText(priceS);
-        holder.quantity.setText(quantityS);
+        if(quantityI > 0){
+            holder.quantity.setText(": In stock");
+        }else{
+            holder.quantity.setText("❌");
+        }
         Glide.with(holder.img.getContext()).load(model.getImageUrl()).into(holder.img);
 
             holder.img.setOnClickListener(new View.OnClickListener() {
