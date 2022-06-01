@@ -33,7 +33,6 @@ public class Adapter extends FirebaseRecyclerAdapter<model,Adapter.myviewholder>
 
         String priceS = Integer.toString(priceI);
         String quantityS = Integer.toString(quantityI);
-        Log.d("test", String.valueOf(priceI));
 
         holder.name.setText(model.getName());
         holder.price.setText(priceS);
@@ -45,7 +44,7 @@ public class Adapter extends FirebaseRecyclerAdapter<model,Adapter.myviewholder>
                 public void onClick(View view) {
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper,new Details(model.getName(),priceS,quantityS,model.getImageUrl())).addToBackStack(null).commit();
-                    Log.d("currectmodel", String.valueOf(model)); //console log
+
                 }
             });
 

@@ -35,6 +35,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainStore extends AppCompatActivity {
@@ -86,9 +88,7 @@ public class MainStore extends AppCompatActivity {
         if(mFirebaseUser != null){
             carts.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    openCart();
-                }
+                public void onClick(View view) { openCart(); }
             });
         }
 

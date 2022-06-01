@@ -23,14 +23,14 @@ import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.HashMap;
+
 public class Details extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     String name,ImageUrl;
     int price,quantity;
-
-    Button addToCartBtn;
 
 
     String priceS = Integer.toString(price);

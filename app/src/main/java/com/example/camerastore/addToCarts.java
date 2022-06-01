@@ -90,7 +90,7 @@ public class addToCarts extends AppCompatActivity {
         incrementBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(quantityTvC < 5) {
+                if (quantityTvC != quantityFromDB && quantityTvC < 5){
                     quantityTvC++;
                     originalPriceC *= quantityTvC;
                 }
@@ -121,8 +121,11 @@ public class addToCarts extends AppCompatActivity {
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int desquantitDB = quantityFromDB - quantityTvC;
+                Log.d("desquantitDB", String.valueOf(desquantitDB));
+                HashMap hashMap = new HashMap();
+                hashMap.put("quantity",desquantitDB);
+                rootdatabaseReference.child(nameDB).updateChildren(hashMap);
                 insertProductToCartData();
             }
         });

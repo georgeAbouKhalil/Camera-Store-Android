@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".updateData">
 
     <TextView
@@ -15,7 +16,6 @@
         android:layout_marginBottom="84dp"
         android:fontFamily="@font/baloo"
         android:text="Update Data"
-
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="30dp"
@@ -28,9 +28,9 @@
         android:layout_width="212dp"
         android:layout_height="49dp"
         android:layout_marginBottom="45dp"
-
         android:ems="10"
         android:gravity="center"
+        android:backgroundTint="#939393"
         android:hint="product name"
         android:inputType="textPersonName"
         android:textColor="@color/black"
@@ -46,7 +46,7 @@
         android:layout_width="212dp"
         android:layout_height="43dp"
         android:layout_marginBottom="34dp"
-
+        android:backgroundTint="#939393"
         android:ems="10"
         android:gravity="center"
         android:hint="img url"
@@ -63,7 +63,7 @@
         android:layout_width="208dp"
         android:layout_height="46dp"
         android:layout_marginBottom="43dp"
-
+        android:backgroundTint="#939393"
         android:ems="10"
         android:gravity="center"
         android:hint="Name"
@@ -80,7 +80,7 @@
         android:layout_width="206dp"
         android:layout_height="38dp"
         android:layout_marginBottom="40dp"
-
+        android:backgroundTint="#939393"
         android:ems="10"
         android:gravity="center"
         android:hint="Price"
@@ -100,6 +100,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="quantity"
+        android:backgroundTint="#939393"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -110,9 +111,10 @@
 
     <Button
         android:id="@+id/updateBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
         android:layout_marginStart="65dp"
+        android:layout_marginTop="93dp"
         android:layout_marginEnd="65dp"
         android:layout_marginBottom="78dp"
         android:background="@drawable/round_btn"
@@ -124,7 +126,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/quantityData" />
 
     <Button
         android:id="@+id/button3"
@@ -136,8 +138,11 @@
         android:text="logout"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/updateBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
