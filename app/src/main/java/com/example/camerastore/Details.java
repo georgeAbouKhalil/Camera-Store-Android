@@ -29,8 +29,8 @@ public class Details extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    String name,ImageUrl;
-    int price,quantity;
+    String name, ImageUrl;
+    int price, quantity;
 
 
     String priceS = Integer.toString(price);
@@ -43,7 +43,7 @@ public class Details extends Fragment {
 
     }
 
-    public Details(String name, String priceS, String quantityS, String ImageUrl){
+    public Details(String name, String priceS, String quantityS, String ImageUrl) {
         this.name = name;
         this.priceS = priceS;
         this.quantityS = quantityS;
@@ -51,28 +51,28 @@ public class Details extends Fragment {
     }
 
 
-
-    public static Details newInstance(String param1, String param2){
+    public static Details newInstance(String param1, String param2) {
         Details fragmet = new Details();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1,param1);
-        args.putString(ARG_PARAM2,param2);
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
         fragmet.setArguments(args);
         return fragmet;
     }
 
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(getArguments() != null){
+        if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
     }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container ,
-                              Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.activity_details, container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_details, container, false);
 
         ImageView imageHolder = view.findViewById(R.id.detailImage);
         TextView nameHolder = view.findViewById(R.id.detailTitle);
@@ -87,39 +87,39 @@ public class Details extends Fragment {
         nameHolder.setText(name);
         priceHolder.setText(priceS);
 
-        if(mFirebaseUser != null){
-            if(!mFirebaseUser.isEmailVerified()){
+        if (mFirebaseUser != null) {
+            if (!mFirebaseUser.isEmailVerified()) {
                 Toast.makeText(getActivity(), "go Verified to access the payment", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 quantityHolder.setText("In Stock: " + quantityS);
                 button_buy.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         // product details transfer to the visa
-                        Intent transferItems = new Intent(getActivity(),visa.class);
-                        transferItems.putExtra("IMAGE",ImageUrl);
-                        transferItems.putExtra("NAME",name);
-                        transferItems.putExtra("PRICE",priceS);
-                        transferItems.putExtra("quantity",quantityS);
-                        Log.d("IMGS2", ImageUrl);
+                        Intent transferItems = new Intent(getActivity(), visa.class);
+                        transferItems.putExtra("IMAGE", ImageUrl);
+                        transferItems.putExtra("NAME", name);
+                        transferItems.putExtra("PRICE", priceS);
+                        transferItems.putExtra("quantity", quantityS);
+//                        Log.d("IMGS2", ImageUrl);
                         startActivity(transferItems);
                     }
                 });
                 add_cart.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent transferItemstoCart = new Intent(getActivity(),addToCarts.class);
-                        transferItemstoCart.putExtra("IMAGE",ImageUrl);
-                        transferItemstoCart.putExtra("NAME",name);
-                        transferItemstoCart.putExtra("PRICE",priceS);
-                        transferItemstoCart.putExtra("quantity",quantityS);
+                        Intent transferItemstoCart = new Intent(getActivity(), addToCarts.class);
+                        transferItemstoCart.putExtra("IMAGE", ImageUrl);
+                        transferItemstoCart.putExtra("NAME", name);
+                        transferItemstoCart.putExtra("PRICE", priceS);
+                        transferItemstoCart.putExtra("quantity", quantityS);
 
                         startActivity(transferItemstoCart);
                     }
                 });
 
             }
-            if(quantityS.startsWith("0")){
+            if (quantityS.startsWith("0")) {
                 quantityHolder.setText("Out Of Stock");
                 button_buy.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -133,7 +133,7 @@ public class Details extends Fragment {
                         Toast.makeText(getActivity(), "The product is not In stock", Toast.LENGTH_SHORT).show();
                     }
                 });
-            }else{
+            } else {
                 quantityHolder.setText(" In Stock");
             }
         }
@@ -141,8 +141,6 @@ public class Details extends Fragment {
         Glide.with(getContext()).load(ImageUrl).into(imageHolder);
         return view;
     }
-
-
 
 
 }

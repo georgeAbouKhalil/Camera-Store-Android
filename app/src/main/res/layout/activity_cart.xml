@@ -75,6 +75,7 @@
         android:fontFamily="sans-serif"
         android:text="Remove All"
         android:textColor="@color/white"
+        android:visibility="invisible"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/placeOrder"
         app:layout_constraintEnd_toEndOf="parent"

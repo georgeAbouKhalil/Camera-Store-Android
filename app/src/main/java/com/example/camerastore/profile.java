@@ -33,8 +33,8 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class profile extends AppCompatActivity {
-    Button logout2,buttonLogin,changeProfile;
-    TextView userName,email,phone;
+    Button logout2, buttonLogin, changeProfile;
+    TextView userName, email, phone;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -55,13 +55,9 @@ public class profile extends AppCompatActivity {
         phone = findViewById(R.id.profilePhone);
         logout2 = findViewById(R.id.logout2);
         buttonLogin = findViewById(R.id.buttonLogin);
-
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
-
-
-
         profileImage = findViewById(R.id.profileImage);
         changeProfile = findViewById(R.id.changeProfile);
 
@@ -76,22 +72,22 @@ public class profile extends AppCompatActivity {
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
+                switch (menuItem.getItemId()) {
                     case R.id.nav_login:
-                        startActivity(new Intent(getApplicationContext(),Login.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), Login.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_signUp:
-                        startActivity(new Intent(getApplicationContext(),SignUp.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), SignUp.class));
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.nav_profile:
                         return true;
 
                     case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(),MainStore.class));
+                        startActivity(new Intent(getApplicationContext(), MainStore.class));
                         return true;
                 }
                 return false;
@@ -99,10 +95,9 @@ public class profile extends AppCompatActivity {
         });
 
 
-
         final FirebaseUser mFirebaseUser = fAuth.getCurrentUser();
 
-        if(mFirebaseUser != null){
+        if (mFirebaseUser != null) {
             userId = fAuth.getCurrentUser().getUid();
             DocumentReference documentReference = fStore.collection("users").document(userId);
             documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
@@ -114,7 +109,7 @@ public class profile extends AppCompatActivity {
                 }
             });
 
-            StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"profile.jpg");
+            StorageReference profileRef = storageReference.child("users/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
             profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                 @Override
                 public void onSuccess(Uri uri) {
@@ -123,34 +118,34 @@ public class profile extends AppCompatActivity {
             });
 
         }
-        if(mFirebaseUser != null){
+        if (mFirebaseUser != null) {
             changeProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // open gallary
                     Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(openGalleryIntent,1000);
+                    startActivityForResult(openGalleryIntent, 1000);
                 }
             });
-        }else
+        } else
             Toast.makeText(this, "You must be logged in to change a photo", Toast.LENGTH_SHORT).show();
 
 
-            buttonLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    openMainLogin();
-                }
-            });
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMainLogin();
+            }
+        });
 
-        
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @androidx.annotation.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1000){
-            if(resultCode == Activity.RESULT_OK){
+        if (requestCode == 1000) {
+            if (resultCode == Activity.RESULT_OK) {
                 Uri imageUri = data.getData();
                 //profileImage.setImageURI(imageUri);
 
@@ -162,7 +157,7 @@ public class profile extends AppCompatActivity {
 
     private void uploadImageFirebase(Uri imageUri) {
         //upload image to firebase storage
-        final StorageReference fileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"profile.jpg");
+        final StorageReference fileRef = storageReference.child("users/" + fAuth.getCurrentUser().getUid() + "profile.jpg");
         fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -189,8 +184,8 @@ public class profile extends AppCompatActivity {
         finish();
     }
 
-    public void openMainLogin(){
-        Intent intent = new Intent(this,Login.class);
+    public void openMainLogin() {
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
 

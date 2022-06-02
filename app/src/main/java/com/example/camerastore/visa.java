@@ -67,7 +67,6 @@ public class visa extends AppCompatActivity {
     DatabaseReference rootdatabaseReference;
     int random = new Random().nextInt((180000 - 18000) + 1) + 18000;
     FirebaseAuth fAuth;
-
     String nameM,priceM;
     SimpleDateFormat datePatternFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
 

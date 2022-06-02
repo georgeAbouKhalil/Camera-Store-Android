@@ -5,13 +5,20 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 public class PCarts {
 
     String imageUrl,name;
-    int price,quantity;
+    int price,quantity,TotalQuantity;
     public PCarts(){}
     public PCarts(String imageUrl, String name, int price, int quantity) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+    }
+    public PCarts(String imageUrl, String name, int price, int quantity,int TotalQuantity) {
+        this.imageUrl = imageUrl;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.TotalQuantity = TotalQuantity;
     }
 
 
@@ -45,5 +52,13 @@ public class PCarts {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getTotalQuantity() {
+        return TotalQuantity;
+    }
+
+    public void setTotalQuantity(int totalQuantity) {
+        TotalQuantity = totalQuantity;
     }
 }

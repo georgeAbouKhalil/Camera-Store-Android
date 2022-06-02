@@ -125,6 +125,7 @@ public class addToCarts extends AppCompatActivity {
                 Log.d("desquantitDB", String.valueOf(desquantitDB));
                 HashMap hashMap = new HashMap();
                 hashMap.put("quantity",desquantitDB);
+                hashMap.put("TotalQuantity",quantitDB);
                 rootdatabaseReference.child(nameDB).updateChildren(hashMap);
                 insertProductToCartData();
             }
@@ -132,8 +133,8 @@ public class addToCarts extends AppCompatActivity {
     }
 
     private void insertProductToCartData() {
-        PCarts productToCart = new PCarts(imgDB,nameDB,originalPriceC,quantityTvC);
-        rootCartdatabaseReference.child(userId).push().setValue(productToCart);
+        PCarts productToCart = new PCarts(imgDB,nameDB,originalPriceC,quantityTvC,quantityFromDB);
+        rootCartdatabaseReference.child(userId).child(nameDB).setValue(productToCart);
         Toast.makeText(this, "Product added to cart !", Toast.LENGTH_SHORT).show();
     }
 

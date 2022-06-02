@@ -57,6 +57,19 @@
             android:textSize="25sp"
             android:textStyle="bold"/>
 
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:background="@drawable/round_btnr"
+            android:layout_below="@+id/qtytextrec"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            />
+
         ></RelativeLayout>
 
 

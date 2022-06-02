@@ -157,7 +157,8 @@ public class SignUp extends AppCompatActivity {
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
+//                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
+                                    Toast.makeText(SignUp.this, "Email not sent", Toast.LENGTH_SHORT).show();
                                 }
                             });
 
