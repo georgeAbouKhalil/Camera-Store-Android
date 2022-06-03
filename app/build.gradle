@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.itextpdf:itextg:5.5.10'
 
     implementation 'com.airbnb.android:lottie:3.7.0'
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
 
 
 }

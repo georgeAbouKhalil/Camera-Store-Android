@@ -2,16 +2,22 @@ package com.example.camerastore;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,51 +28,81 @@ import java.util.HashMap;
 
 public class updateData extends AppCompatActivity {
 
-    EditText productNumber,imgUrl,name,price,quantity;
-    DatabaseReference rootdatabaseReference;
-    Button btnUpdate;
+    RecyclerView recyclerView;
+    AdapterUpdate adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_data);
 
-        btnUpdate = findViewById(R.id.updateBtn);
-        productNumber = findViewById(R.id.numberProductData);
-        imgUrl = findViewById(R.id.imgUrlData);
-        name = findViewById(R.id.nameData);
-        price = findViewById(R.id.priceData);
-        quantity = findViewById(R.id.quantityData);
-        rootdatabaseReference = FirebaseDatabase.getInstance().getReference().child("products");
+        recyclerView = findViewById(R.id.rv);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        btnUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String imgUr2 = imgUrl.getText().toString();
-                String name2 = name.getText().toString();
-                int price2 = Integer.parseInt(price.getText().toString());
-                int quantity2 = Integer.parseInt(quantity.getText().toString());
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("products"), model.class)
+                        .build();
 
-                HashMap hashMap = new HashMap();
-                hashMap.put("imageUrl",imgUr2);
-                hashMap.put("name",name2);
-                hashMap.put("price",price2);
-                hashMap.put("quantity",quantity2);
+        adapter= new AdapterUpdate(options);
+        recyclerView.setAdapter(adapter);
 
-                rootdatabaseReference.child(productNumber.getText().toString()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {
-                    @Override
-                    public void onSuccess(Object o) {
-                        Toast.makeText(updateData.this, "Your Data is Successfuly Updated", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
     }
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut(); //logout
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search,menu);
+
+        MenuItem item = menu.findItem(R.id.search);
+        SearchView searchView =(SearchView) item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                txtSearch(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                txtSearch(query);
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    private void txtSearch(String str){
+
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("products").orderByChild("name").startAt(str).endAt(str+"~"), model.class)
+                        .build();
+
+        adapter = new AdapterUpdate(options);
+        adapter.startListening();
+        recyclerView.setAdapter(adapter);
+
+
     }
 }
