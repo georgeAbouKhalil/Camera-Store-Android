@@ -7,7 +7,7 @@
     android:background="@drawable/background"
     tools:context=".profile">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
         android:layout_width="173dp"
         android:layout_height="151dp"
@@ -56,8 +56,9 @@
 
     <Button
         android:id="@+id/changeProfile"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="470dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/profileinput"
@@ -67,15 +68,16 @@
 
     <Button
         android:id="@+id/logout2"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="550dp"
         android:layout_marginBottom="31dp"
         android:background="@drawable/profileinput"
         android:onClick="logout"
         android:text="Logout"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginTop="550dp" />
+        android:textSize="20sp" />
 
     <ImageButton
         android:id="@+id/imageButton"

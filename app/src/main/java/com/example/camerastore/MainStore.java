@@ -52,6 +52,7 @@ public class MainStore extends AppCompatActivity {
     StorageReference storageReference;
     FrameLayout framLayout;
     CircleImageView carts;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

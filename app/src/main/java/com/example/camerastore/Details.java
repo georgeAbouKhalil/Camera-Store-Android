@@ -85,7 +85,7 @@ public class Details extends Fragment {
         Button button_buy = view.findViewById(R.id.button_buy);
         Button add_cart = view.findViewById(R.id.add_cart);
         nameHolder.setText(name);
-        priceHolder.setText(priceS);
+        priceHolder.setText("$ "+priceS);
 
         if (mFirebaseUser != null) {
             if (!mFirebaseUser.isEmailVerified()) {

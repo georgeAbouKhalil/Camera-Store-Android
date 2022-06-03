@@ -35,7 +35,7 @@ public class Adapter extends FirebaseRecyclerAdapter<model,Adapter.myviewholder>
         String quantityS = Integer.toString(quantityI);
 
         holder.name.setText(model.getName());
-        holder.price.setText(priceS);
+        holder.price.setText("$ "+priceS);
         if(quantityI > 0){
             holder.quantity.setText(": In stock");
         }else{
