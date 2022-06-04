@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
     >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Add New Product"
+        android:text="Update Details"
         android:background="@drawable/background"
         android:textSize="25dp"
         android:gravity="center"
@@ -20,14 +19,14 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"
         android:text="Name"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:textColor="@color/black"
@@ -41,14 +40,14 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
+        android:layout_marginTop="5dp"
         android:textColor="@color/black"
-        android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:text="Price"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
@@ -60,44 +59,44 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
         android:gravity="center"
+        android:textSize="20sp"
         android:textColor="@color/black"
-        android:text="Quantity"
-        android:textSize="20sp" />
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Quantity"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
-        android:gravity="center"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
+        android:background="@drawable/rounded"
+        android:gravity="center"
         android:id="@+id/txtQuantity"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:text="Image Url"
-        android:textSize="20sp" />
+        android:text="Image Url"/>
 
     <EditText
+        android:id="@+id/txtimageUrl"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:background="@drawable/rounded"
-        android:gravity="center"
-        android:id="@+id/txtimageUrl"/>
+        android:gravity="center" />
 
     <Button
         android:layout_width="match_parent"
@@ -105,31 +104,13 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginTop="10dp"
-        android:text="Save"
+        android:text="Update"
         android:textSize="21dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:background="@drawable/rounded"
         android:gravity="center"
         android:backgroundTint="#1902E6"
-        android:id="@+id/btnAdd"/>
-
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/rounded"
-        android:backgroundTint="#1902E6"
-        android:gravity="center"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-
-        android:textSize="21dp"
-        android:visibility="invisible" />
+        android:id="@+id/btnUpdate"/>
 
 </LinearLayout>

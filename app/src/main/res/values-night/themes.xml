@@ -15,5 +15,6 @@
 <!--    </style>-->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:statusBarColor" >@color/myColor</item>
     </style>
 </resources>
