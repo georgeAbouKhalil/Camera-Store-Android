@@ -81,30 +81,35 @@ public class cart extends AppCompatActivity {
                 deleteItemCarts(userId);
             }
         });
+            placeOrder.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(recyclerCart.getAdapter().getItemCount() >0) {
+                        showToast("Order placed");
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(cart.this, "My Notification");
+                        builder.setContentTitle("Reception");
+                        builder.setContentText("Thanks for buying a camera The price you bought the camera is Reception number is " + random + "If there is any problem or delay you are welcome to contact us we will be happy to help");
+                        builder.setSmallIcon(R.drawable.logo);
+                        builder.setAutoCancel(true);
 
-        placeOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showToast("Order placed");
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(cart.this,"My Notification");
-                builder.setContentTitle("Reception");
-                builder.setContentText("Thanks for buying a camera The price you bought the camera is Reception number is " + random + "If there is any problem or delay you are welcome to contact us we will be happy to help");
-                builder.setSmallIcon(R.drawable.logo);
-                builder.setAutoCancel(true);
+                        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(cart.this);
+                        managerCompat.notify(1, builder.build());
+                        deleteItemCarts(userId);
 
-                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(cart.this);
-                managerCompat.notify(1,builder.build());
-                deleteItemCarts(userId);
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent i = new Intent(getApplicationContext(),TanksForBaying.class);
-                        startActivity(i);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent i = new Intent(getApplicationContext(), TanksForBaying.class);
+                                startActivity(i);
+                            }
+                        }, 1500);
+                    }else{
+                        Toast.makeText(cart.this, "Cart is empty", Toast.LENGTH_SHORT).show();
                     }
-                },1500);
-            }
-        });
+                }
+            });
+
+
 
     }
     private void showToast(String message){
