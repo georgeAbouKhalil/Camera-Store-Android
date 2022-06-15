@@ -12,6 +12,7 @@ Things to do within the project Replacing an image of a username Identifying a l
 -  Login
 -  Register
 -  Profile
+-  Admin side
 
 ![Screenshot 2022-05-29 224146](https://user-images.githubusercontent.com/88317294/170890577-cfa3fda2-3b5e-4cde-9291-110005061358.png)
 
@@ -26,3 +27,5 @@ Things to do within the project Replacing an image of a username Identifying a l
 ![Screenshot 2022-05-29 225621](https://user-images.githubusercontent.com/88317294/170890599-6d2eb764-3404-4206-b37f-bd3fa13c4a35.png)
 
 ![Screenshot 2022-05-29 234530](https://user-images.githubusercontent.com/88317294/170890782-4d22f049-e936-46c2-b828-3db7e3e330cf.png)
+
+![WhatsApp Image 2022-06-05 at 2 10 47 PM](https://user-images.githubusercontent.com/88317294/172047900-6445e6be-8459-4534-8c7c-c39dbe59e04e.jpeg)
