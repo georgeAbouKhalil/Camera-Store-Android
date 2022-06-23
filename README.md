@@ -14,7 +14,7 @@ Things to do within the project Replacing an image of a username Identifying a l
 -  Profile
 -  Admin side
 
-![Screenshot 2022-05-29 224146](https://user-images.githubusercontent.com/88317294/170890577-cfa3fda2-3b5e-4cde-9291-110005061358.png)
+![WhatsApp Image 2022-06-23 at 10 39 33 AM](https://user-images.githubusercontent.com/88317294/175319976-dc933692-2743-4e1b-bad1-d46d9480a610.jpeg)
 
 ![Screenshot 2022-05-29 224247](https://user-images.githubusercontent.com/88317294/170890582-4e338b37-b707-4435-aae8-464a842acb8e.png)
 
